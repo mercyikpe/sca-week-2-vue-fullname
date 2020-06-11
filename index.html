@@ -101,7 +101,7 @@
 
 			<div class="form-input-holder">
 				<h3>Full name</h3>
-				<h2>{{ fullname | capitalize }}</h2>
+				<h2>{{ fullname }}</h2>
 			</div>
 
 		</div>
@@ -121,11 +121,7 @@
 			fullname: function(){
 				return this.firstname + ' ' + this.lastname;
 			}
-		},
-		Vue.filter('capitalize', function (string) {
-			var [first, ...tail] = string
-			return first.toUpperCase() + tail.join('')
-		})
+		}
 	});
 </script>
 </body>
